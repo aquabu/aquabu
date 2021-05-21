@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Plant UML Diagram</title>
+    <script src="https://cdn.rawgit.com/jmnote/plantuml-encoder/d133f316/dist/plantuml-encoder.min.js"></script>
+    <script type="text/javascript">
+      function encodeAndRedirect() {
+        var urlEncoded = new URLSearchParams(window.location.search).get('plantuml')
+        if(urlEncoded == undefined || urlEncoded == "") {
+            console.log('no url encoded parameter for diagram. Needs: ?plantuml=')
+        } else {
+          var content = decodeURIComponent(urlEncoded)
+          var src = "https://www.plantuml.com/plantuml/img/" + window.plantumlEncoder.encode(content)
+          document.getElementById("plantuml-diagram").src = src
+        }
+      }
+    </script>
+</head>
+
+<body onload="encodeAndRedirect()">
+    <img id='plantuml-diagram' alt="pass in a URL encoded diagram with the param ?plantuml=">
+</body>
+</html>
