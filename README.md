@@ -1,6 +1,6 @@
 ## ¡alohahola!
 
-Welcome to Aquaubu's odds and ends served up at aquabu.github.io
+Welcome to Aquaubu's odds and ends served up at https://aquabu.github.io
 
 ## PlantUML
 
